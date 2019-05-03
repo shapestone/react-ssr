@@ -10,7 +10,9 @@ class Home extends React.Component {
     head() {
         return(
             <Helmet>
+                <meta charSet="utf-8" />
                 <title>My page title</title>
+                <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
         )
     }

@@ -26,11 +26,11 @@ app.get('*', (req, res) => {
 
     const helmet = Helmet.renderStatic();
 
-    const html = `
-<html>
+    const html = `<html>
     <head>
         ${helmet.meta.toString()}
         ${helmet.title.toString()}
+        ${helmet.link.toString()}
     </head>
     <body>
         <div id="root">
@@ -38,8 +38,7 @@ app.get('*', (req, res) => {
         </div>
         <script src="client_bundle.js"></script>
     </body>
-</html>
-    `;
+</html>`;
 
     res.send(html);
 });
