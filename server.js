@@ -33,9 +33,7 @@ app.get('*', (req, res) => {
         ${helmet.link.toString()}
     </head>
     <body>
-        <div id="root">
-            ${content}
-        </div>
+        <div id="root">${content}</div>
         <script src="client_bundle.js"></script>
     </body>
 </html>`;
