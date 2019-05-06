@@ -11,17 +11,14 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 loader: 'babel-loader',
                 exclude: '/node_modules/',
                 options: {
                     presets: [
-                        'react',
-                        'stage-0',
-                        ['env', {
-                            target: { browser: ['last 2 versions']}
-                        }]
-                    ]
+                        '@babel/react',
+                        '@babel/env'
+                    ],
                 }
             }
         ]
