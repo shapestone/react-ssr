@@ -1,7 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { NavLink } from "react-router-dom";
 
-class Home extends React.Component {
+class SubPage extends React.Component {
 
     exampleMethod() {
         console.log('JS is running');
@@ -12,7 +13,7 @@ class Home extends React.Component {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>My page title</title>
-                <link rel="canonical" href="http://mysite.com/example" />
+                <link rel="canonical" href="http://mysite.com/subpage" />
             </Helmet>
         )
     }
@@ -22,10 +23,10 @@ class Home extends React.Component {
             <div>
                 {this.head()}
                 <h1>
-                    My Home Page
+                    My Sub Page
                 </h1>
                 <p>
-                    Some content
+                    <NavLink to="/">Home</NavLink>
                 </p>
                 <button onClick={() => this.exampleMethod()}>Console log some text</button>
             </div>
@@ -33,4 +34,4 @@ class Home extends React.Component {
     }
 }
 
-export default Home;
+export default SubPage;
