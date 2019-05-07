@@ -5,8 +5,7 @@ Server Side Rendered (SSR) React
 I found myself in the need of an SSR implementation supporting React.js.
 There are many versions online for React.js implementations, however I
 found most of them to be overly complicated for what I needed.
-This is my version of the most simple setup that I was able to find and
- modify. It's based on: https://youtu.be/LfA2XDmgVbo
+This is my version of the most simple setup that I was able to create.
 
 My requirements were:
   - React: 16.8.6
