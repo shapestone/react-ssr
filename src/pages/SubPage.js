@@ -1,11 +1,14 @@
-import React from 'react';
+import React, {useEffect, useState} from "react";
 import { Helmet } from 'react-helmet';
 import { NavLink } from "react-router-dom";
 
 function SubPage() {
+    const [counter, setCounter] = useState(0);
 
-    const exampleMethod = () => {
-        console.log('JS is running');
+    const handleCounterEvent = e => {
+        let value = counter;
+        value += 1;
+        setCounter(value);
     };
 
     const head = () => {
@@ -25,9 +28,12 @@ function SubPage() {
                 My Sub Page
             </h1>
             <p>
+                Counter: {counter}
+            </p>
+            <p>
                 <NavLink to="/">Home</NavLink>
             </p>
-            <button onClick={() => exampleMethod()}>Console log some text</button>
+            <button onClick={handleCounterEvent}>Console log some text</button>
         </div>
     )
 }
