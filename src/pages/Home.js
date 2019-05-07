@@ -2,13 +2,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { NavLink } from "react-router-dom";
 
-class Home extends React.Component {
+function Home() {
 
-    exampleMethod() {
+    const exampleMethod = () => {
         console.log('JS is running');
-    }
+    };
 
-    head() {
+    const head = () => {
         return(
             <Helmet>
                 <meta charSet="utf-8" />
@@ -16,22 +16,20 @@ class Home extends React.Component {
                 <link rel="canonical" href="http://mysite.com/" />
             </Helmet>
         )
-    }
+    };
 
-    render() {
-        return(
-            <div>
-                {this.head()}
-                <h1>
-                    My Home Page
-                </h1>
-                <p>
-                    <NavLink to="/subpage">Subpage</NavLink>
-                </p>
-                <button onClick={() => this.exampleMethod()}>Console log some text</button>
-            </div>
-        )
-    }
+    return (
+        <div>
+            {head()}
+            <h1>
+                My Home Page
+            </h1>
+            <p>
+                <NavLink to="/subpage">Subpage</NavLink>
+            </p>
+            <button onClick={() => exampleMethod()}>Console log some text</button>
+        </div>
+    );
 }
 
 export default Home;
